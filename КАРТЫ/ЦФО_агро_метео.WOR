@@ -1,0 +1,212 @@
+!Workspace
+!Version 1150
+!Charset WindowsCyrillic
+Open Table "C:\Users\n.klyukin.CNIIP\Documents\СХ в градостр\КАРТЫ_РФ_ЦФО\RegionsCFO_met" As RegionsCFO_met Interactive
+Open Table "C:\Users\n.klyukin.CNIIP\Documents\СХ в градостр\КАРТЫ_РФ_ЦФО\RegionsCFO" As RegionsCFO Interactive
+Open Table "C:\Users\n.klyukin.CNIIP\Documents\СХ в градостр\КАРТЫ_РФ_ЦФО\RegionsCFO_ob" As RegionsCFO_ob Interactive
+Open Table "АКП_энцикл" As АКП_энцикл Interactive
+Select RegionsCFO_ob . Name , RegionsCFO_ob . Obl , RegionsCFO_ob . Name1 , RegionsCFO_ob . ГТК_ср , RegionsCFO_ob . ГТК_изм , RegionsCFO_ob . Метеопотенциал__т_га , RegionsCFO_ob . Агропотенциал__т_га , RegionsCFO_ob . Факт_ур_ть_зерновых_2020_г__т_г , RegionsCFO_ob . Посевные_пл_в_1990_г_млн_га , RegionsCFO_ob . Посевные_пл_в_2020_г_млн_га , RegionsCFO_ob . Сокращение_ПП__% , АКП_энцикл . АКР , АКП_энцикл . Бк  from RegionsCFO_ob , АКП_энцикл  where Name1 = Области  into Query7 
+Browse * From RegionsCFO_ob
+  Position (0.697917,2.4375) Units "in"
+  Width 9.98958 Units "in" Height 5.15625 Units "in" 
+set window FrontWindow() Font ("Segoe UI",0,9,0)
+set browse order by 2
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Papersize 9
+Browse * From АКП_энцикл
+  Position (0.0416667,1.59375) Units "in"
+  Width 9.98958 Units "in" Height 5.15625 Units "in" 
+set window FrontWindow() Font ("Segoe UI",0,9,0)
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Papersize 9
+Browse * From Query7
+  Position (0.260417,1.875) Units "in"
+  Width 9.98958 Units "in" Height 5.15625 Units "in" 
+set window FrontWindow() Font ("Segoe UI",0,9,0)
+set browse order by 1
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Papersize 9
+Browse * From АКП_энцикл
+  Position (0.697917,2.4375) Units "in"
+  Width 9.98958 Units "in" Height 5.15625 Units "in" 
+set window FrontWindow() Font ("Segoe UI",0,9,0)
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Papersize 9
+Map From Query7,RegionsCFO
+  Position (0.916667,2.71875) Units "in"
+  Width 9.98958 Units "in" Height 5.15625 Units "in" 
+Set Window FrontWindow() ScrollBars Off Autoscroll On Enhanced On Smooth Text Antialias Image High
+Set Map
+  CoordSys Earth Projection 1, 0
+  Center (39.2015625,54.593281)
+  Zoom 2168.330197 Units "km"
+  Preserve Zoom Display Zoom
+  Distance Units "km" Area Units "sq km" XY Units "degree"
+shade 1 with Бк ranges apply all use all Brush (2,2854078,16777215) 
+  6.9: 13.6 Brush (2,15792616,16777215) Pen (1,2,0) ,
+  13.6: 14.5 Brush (2,12248252,16777215) Pen (1,2,0) ,
+  14.5: 15.1 Brush (2,8113348,16777215) Pen (1,2,0) ,
+  15.1: 15.8 Brush (2,2854078,16777215) Pen (1,2,0) 
+  default Brush (2,16777215,16777215) Pen (1,2,0) 
+  # use 1 round 0.01 inflect off Brush (2,16777215,16777215) at 2 by 0 color 1 # 
+shade 2 with АКР ranges apply all use all Brush (2,2854078,16777215) 
+  11.7: 12.4 Brush (2,15792616,16777215) Pen (1,2,0) ,
+  12.4: 12.9 Brush (2,12248252,16777215) Pen (1,2,0) ,
+  12.9: 13.9 Brush (2,8113348,16777215) Pen (1,2,0) ,
+  13.9: 14.2 Brush (2,2854078,16777215) Pen (1,2,0) 
+  default Brush (2,16777215,16777215) Pen (1,2,0) 
+  # use 1 round 0.01 inflect off Brush (2,16777215,16777215) at 2 by 0 color 1 # 
+shade 3 with АКР ranges apply all use all Brush (2,2854078,16777215) 
+  11.7: 12.4 Brush (2,15792616,16777215) Pen (1,2,0) ,
+  12.4: 12.9 Brush (2,12248252,16777215) Pen (1,2,0) ,
+  12.9: 13.9 Brush (2,8113348,16777215) Pen (1,2,0) ,
+  13.9: 14.2 Brush (2,2854078,16777215) Pen (1,2,0) 
+  default Brush (2,16777215,16777215) Pen (1,2,0) 
+  # use 1 round 0.01 inflect off Brush (2,16777215,16777215) at 2 by 0 color 1 # 
+shade 4 with Сокращение_ПП__% ignore 0 ranges apply all use all Brush (2,2854078,16777215) 
+  -0.72: -0.61 Brush (2,15792616,16777215) Pen (1,2,0) ,
+  -0.61: -0.36 Brush (2,12248252,16777215) Pen (1,2,0) ,
+  -0.36: -0.1 Brush (2,8113348,16777215) Pen (1,2,0) ,
+  -0.1: -0.09 Brush (2,2854078,16777215) Pen (1,2,0) 
+  default Brush (2,16777215,16777215) Pen (1,2,0) 
+  # use 1 round 0.001 inflect off Brush (2,16777215,16777215) at 2 by 0 color 1 # 
+shade 5 with Посевные_пл_в_1990_г_млн_га,Посевные_пл_в_2020_г_млн_га bar 
+  Max Size 0.718352 Units "cm" At Value 3 vary size by "CONST" 
+  border Pen (1,2,0) Width 0.718352 Units "cm"  position center above 
+  style 
+    Brush (2,14948892,16777215) ,
+    Brush (2,3636920,16777215) 
+  # max 3 color 0 # 
+Set Map
+  Layer 1
+    Display Value
+    Global Pen (1,2,0)  Brush (2,16777215,16777215)  Symbol (35,0,12)  Line (1,2,0)  Font ("Tahoma",0,9,0)
+    Selectable Off
+  Layer 2
+    Display Value
+    Global Pen (1,2,0)  Brush (2,16777215,16777215)  Symbol (35,0,12)  Line (1,2,0)  Font ("Tahoma",0,9,0)
+    Selectable Off
+  Layer 3
+    Display Off
+    Global Pen (1,2,0)  Brush (2,16777215,16777215)  Symbol (35,0,12)  Line (1,2,0)  Font ("Tahoma",0,9,0)
+    Selectable Off
+  Layer 4
+    Display Off
+    Global Pen (1,2,0)  Brush (2,16777215,16777215)  Symbol (35,0,12)  Line (1,2,0)  Font ("Tahoma",0,9,0)
+    Selectable Off
+  Layer 5
+    Display Off
+    Global Pen (1,2,0)  Brush (2,16777215,16777215)  Symbol (35,0,12)  Line (1,2,0)  Font ("Tahoma",0,9,0)
+    Selectable Off
+  Layer 6
+    Display Graphic
+    Global Pen (1,2,0) Brush (2,16777215,16777215) Symbol (35,0,12) Line (1,2,0) Font ("Tahoma",0,9,0)
+    Label Line None Position Below Left Font ("Tahoma",0,9,0) Pen (1,2,0) 
+      With Сокращение_ПП__%
+      Parallel On Auto On Overlap Off Duplicates On Offset 5
+      Visibility On
+  Layer 7
+    Display Global
+    Global Pen (1,2,0) Brush (2,16777215,16777215) Symbol (35,0,12) Line (1,2,0) Font ("Tahoma",0,9,0)
+    Label Line None Position Above Left Font ("Tahoma",0,9,0) Pen (1,2,0) 
+      With Obl
+      Parallel On Auto On Overlap Off Duplicates On Offset 15
+      Visibility On
+set legend 
+  layer 1 
+    display on 
+    shades on 
+    symbols off 
+    lines off 
+    count off 
+    title "Посевные пл, млн га" Font ("Arial",0,9,0)
+    subtitle auto Font ("Arial",0,8,0)
+    ascending on 
+    ranges Font ("Arial",0,8,0)
+      auto display off ,
+      auto display on ,
+      auto display on  
+set legend 
+  layer 2 
+    display on 
+    shades on 
+    symbols off 
+    lines off 
+    count on 
+    title auto Font ("Arial",0,9,0)
+    subtitle auto Font ("Arial",0,8,0)
+    ascending off 
+    ranges Font ("Arial",0,8,0)
+      auto display off ,
+      auto display on ,
+      auto display on ,
+      auto display on ,
+      auto display on  
+set legend 
+  layer 3 
+    display on 
+    shades on 
+    symbols off 
+    lines off 
+    count on 
+    title auto Font ("Arial",0,9,0)
+    subtitle auto Font ("Arial",0,8,0)
+    ascending off 
+    ranges Font ("Arial",0,8,0)
+      auto display off ,
+      auto display on ,
+      auto display on ,
+      auto display on ,
+      auto display on  
+set legend 
+  layer 4 
+    display on 
+    shades on 
+    symbols off 
+    lines off 
+    count on 
+    title auto Font ("Arial",0,9,0)
+    subtitle auto Font ("Arial",0,8,0)
+    ascending off 
+    ranges Font ("Arial",0,8,0)
+      auto display off ,
+      auto display on ,
+      auto display on ,
+      auto display on ,
+      auto display on  
+set legend 
+  layer 5 
+    display on 
+    shades on 
+    symbols off 
+    lines off 
+    count on 
+    title auto Font ("Arial",0,9,0)
+    subtitle auto Font ("Arial",0,8,0)
+    ascending off 
+    ranges Font ("Arial",0,8,0)
+      auto display off ,
+      auto display on ,
+      auto display on ,
+      auto display on ,
+      auto display on  
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Papersize 9
+Create Designer Legend
+  Position (16.9688,0.21875) Units "in"
+  Width 2.80208 Units "in" Height 5 Units "in" 
+  Portrait
+  Default Frame Style "#" Font ("Tahoma",0,8,0)
+  Default Frame Line Width 36 Units "pt"
+  Default Frame Region Width 32 Units "pt"
+  Default Frame Region Height 14 Units "pt"
+  Frame From Layer 2
+  Frame From Layer 1
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Papersize 9

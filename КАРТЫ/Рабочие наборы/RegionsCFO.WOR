@@ -1,0 +1,37 @@
+!Workspace
+!Version  950
+!Charset WindowsCyrillic
+Open Table "C:\Users\n.klyukin.CNIIP\Documents\СХ в градостр\КАРТЫ_РФ_ЦФО\RegionsCFO_met" As RegionsCFO_met Interactive
+Open Table "C:\Users\n.klyukin.CNIIP\Documents\СХ в градостр\КАРТЫ_РФ_ЦФО\RegionsCFO" As RegionsCFO Interactive
+Open Table "E:\ЦНИИП\СХ в градостр\Модель СХ РФ\КАРТЫ\АКП_энцикл" As АКП_энцикл Interactive
+Open Table "C:\Users\n.klyukin.CNIIP\Documents\СХ в градостр\КАРТЫ_РФ_ЦФО\RegionsCFO_ob" As RegionsCFO_ob Interactive
+Map From RegionsCFO
+  Position (0.916667,2.71875) Units "in"
+  Width 9.98958 Units "in" Height 5.15625 Units "in" 
+Set Window FrontWindow() ScrollBars Off Autoscroll On Enhanced On Smooth Text Antialias Image High
+Set Map
+  CoordSys Earth Projection 1, 0
+  Center (39.2015625,54.593281)
+  Zoom 2168.330197 Units "km"
+  Preserve Zoom Display Zoom
+  Distance Units "km" Area Units "sq km" XY Units "degree"
+Set Map
+  Layer 1
+    Display Global
+    Global Pen (1,2,0) Brush (2,16777215,16777215) Symbol (35,0,12) Line (1,2,0) Font ("Tahoma",0,9,0)
+    Label Line None Position Above Left Font ("Tahoma",0,9,0) Pen (1,2,0) 
+      With Obl
+      Parallel On Auto On Overlap Off Duplicates On Offset 15
+      Visibility On
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Papersize 9
+Browse * From RegionsCFO_ob
+  Position (0.0416667,1.59375) Units "in"
+  Width 9.98958 Units "in" Height 5.15625 Units "in" 
+  Row 1 Column 2
+set window FrontWindow() Font ("Segoe UI",0,9,0)
+set browse row 1 column 2
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Papersize 9

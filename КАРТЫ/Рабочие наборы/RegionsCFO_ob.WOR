@@ -1,0 +1,183 @@
+!Workspace
+!Version 1520
+!Charset WindowsCyrillic
+Open Table "C:\Users\n.klyukin.CNIIP\Documents\СХ в градостр\КАРТЫ_РФ_ЦФО\RegionsCFO_met" As RegionsCFO_met Interactive
+Open Table "C:\Users\n.klyukin.CNIIP\Documents\СХ в градостр\КАРТЫ_РФ_ЦФО\RegionsCFO" As RegionsCFO Interactive
+Open Table "E:\ЦНИИП\СХ в градостр\Модель СХ РФ\КАРТЫ\АКП_энцикл" As АКП_энцикл Interactive
+Open Table "C:\Users\n.klyukin.CNIIP\Documents\СХ в градостр\КАРТЫ_РФ_ЦФО\RegionsCFO_ob" As RegionsCFO_ob Interactive
+Map From RegionsCFO_ob,RegionsCFO
+  Position (0.0416667,1.59375) Units "in"
+  Width 9.98958 Units "in" Height 5.15625 Units "in" 
+Set Window FrontWindow() ScrollBars Off Autoscroll On Enhanced On Smooth Text Antialias Image High
+Set Map
+  CoordSys Earth Projection 1, 0
+  Center (39.2015625,54.593281)
+  Zoom 2168.330197 Units "km"
+  Preserve Zoom Display Zoom
+  Distance Units "km" Area Units "sq km" XY Units "degree"
+shade 1 with ГТК_изм_2006_2019 ranges apply all use all Brush (2,2854078,16777215) 
+  -1.19: -0.56 Brush (2,15792616,16777215) Pen (1,2,0) ,
+  -0.56: -0.12 Brush (2,12248252,16777215) Pen (1,2,0) ,
+  -0.12: 0.4 Brush (2,8113348,16777215) Pen (1,2,0) ,
+  0.4: 0.86 Brush (2,2854078,16777215) Pen (1,2,0) 
+  default Brush (2,16777215,16777215) Pen (1,2,0) 
+  # use 1 round 0.01 inflect off Brush (2,16777215,16777215) at 2 by 0 color 1 # 
+Set Map
+  Layer 1
+    Display Value
+    Global Pen (1,2,0)  Brush (2,16777215,16777215)  Symbol (35,0,12)  Line (1,2,0)  Font ("Tahoma",0,9,0)
+    Selectable Off
+  Layer 2
+    Display Graphic
+    Global Pen (1,2,0) Brush (2,16777215,16777215) Symbol (35,0,12) Line (1,2,0) Font ("Tahoma",0,9,0)
+    Label Line None Position Below Font ("Tahoma",0,9,0) Pen (1,2,0) 
+      With ГТК_изм_2006_2019
+      Parallel On Auto On Overlap Off Duplicates On Offset 2
+      Visibility On
+  Layer 3
+    Display Global
+    Global Pen (1,2,0) Brush (2,16777215,16777215) Symbol (35,0,12) Line (1,2,0) Font ("Tahoma",0,9,0)
+    Label Line None Position Above Font ("Tahoma",0,9,0) Pen (1,2,0) 
+      With Obl
+      Parallel On Auto On Overlap Off Duplicates On Offset 2
+      Visibility On
+set legend 
+  layer 1 
+    display on 
+    shades on 
+    symbols off 
+    lines off 
+    count on 
+    title auto Font ("Arial",0,9,0)
+    subtitle auto Font ("Arial",0,8,0)
+    ascending off 
+    ranges Font ("Arial",0,8,0)
+      auto display off ,
+      auto display on ,
+      auto display on ,
+      auto display on ,
+      auto display on  
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Papersize 9
+Create Designer Legend
+  Position (16.9688,0.21875) Units "in"
+  Width 2.80208 Units "in" Height 5 Units "in" 
+  Portrait
+  Default Frame Style "#" Font ("Tahoma",0,8,0)
+  Default Frame Line Width 36 Units "pt"
+  Default Frame Region Width 32 Units "pt"
+  Default Frame Region Height 14 Units "pt"
+  Frame From Layer 1
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Papersize 9
+Layout Designer
+  Position (0.479167,2.15625) Units "in"
+  Width 8.27083 Units "in" Height 9.03125 Units "in" 
+  Dim uniqueLayoutWin As Integer
+  uniqueLayoutWin = FrontWindow()
+  Dim restoreCoordSysString As String
+  restoreCoordSysString = "Set " + SessionInfo(1)
+  Set CoordSys Layout Units "in"
+  Set Layout Window uniqueLayoutWin Zoom 84 Center (7.37847,6.03236)
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Resolution 600
+ Papersize 9
+Set Window FrontWindow() Export
+ TrueColor on Border on Dither halftone
+ Transparency Raster device Vector internal
+ Antialiasing on Threshold 0 MaskSize 2 Filter 2
+  Set Layout Window uniqueLayoutWin Page 1
+Map From RegionsCFO_ob,RegionsCFO
+  Position (0.483333,0.956944) Units "in"
+  Width 7.45278 Units "in" Height 6.71528 Units "in" 
+  Name "Карта-1"
+Priority 1 Into Window uniqueLayoutWin
+Set Window WindowID(0) Front
+Set Window FrontWindow() ScrollBars Off Autoscroll On Enhanced On Smooth Text Antialias Image High
+Set Map Redraw Off
+Set Map
+  CoordSys Earth Projection 1, 0
+  Center (39.2015625,54.593281)
+  Zoom 1306.173833 Units "km"
+  Preserve Zoom Display Zoom
+  Distance Units "km" Area Units "sq km" XY Units "degree"
+shade 1 with ГТК_изм_2006_2019 ranges apply all use all Brush (2,2854078,16777215) 
+  -1.19: -0.56 Brush (2,15792616,16777215) Pen (1,2,0) ,
+  -0.56: -0.12 Brush (2,12248252,16777215) Pen (1,2,0) ,
+  -0.12: 0.4 Brush (2,8113348,16777215) Pen (1,2,0) ,
+  0.4: 0.86 Brush (2,2854078,16777215) Pen (1,2,0) 
+  default Brush (2,16777215,16777215) Pen (1,2,0) 
+  # use 1 round 0.01 inflect off Brush (2,16777215,16777215) at 2 by 0 color 1 # 
+Set Map
+  Layer 1
+    Display Value
+    Global Pen (1,2,0)  Brush (2,16777215,16777215)  Symbol (35,0,12)  Line (1,2,0)  Font ("Tahoma",0,9,0)
+    Selectable Off
+  Layer 2
+    Display Graphic
+    Global Pen (1,2,0) Brush (2,16777215,16777215) Symbol (35,0,12) Line (1,2,0) Font ("Tahoma",0,9,0)
+    Label Line None Position Below Font ("Tahoma",0,9,0) Pen (1,2,0) 
+      With ГТК_изм_2006_2019
+      Parallel On Auto On Overlap Off Duplicates On Offset 2
+      Visibility On
+  Layer 3
+    Display Global
+    Global Pen (1,2,0) Brush (2,16777215,16777215) Symbol (35,0,12) Line (1,2,0) Font ("Tahoma",0,9,0)
+    Label Line None Position Above Font ("Tahoma",0,9,0) Pen (1,2,0) 
+      With Obl
+      Parallel On Auto On Overlap Off Duplicates On Offset 2
+      Visibility On
+Set Map Redraw On
+set legend 
+  layer 1 
+    display on 
+    shades on 
+    symbols off 
+    lines off 
+    count on 
+    title "ГТК_изм_2006_2019" Font ("Arial",0,9,0)
+    subtitle auto Font ("Arial",0,8,0)
+    ascending off 
+    ranges Font ("Arial",0,8,0)
+      auto display off ,
+      auto display on ,
+      auto display on ,
+      auto display on ,
+      auto display on  
+Set Window FrontWindow() Printer
+ Name "HP LaserJet MFP M129-M134" Orientation Portrait Copies 1
+ Papersize 9
+Create Designer Legend
+  Position (0,0) Units "in"
+  Width 0 Units "in" Height 0 Units "in" 
+  Custom
+  Default Frame Style "#" Font ("Arial",0,8,0,16777215)
+  Default Frame Line Width 36 Units "pt"
+  Default Frame Region Width 23 Units "pt"
+  Default Frame Region Height 11 Units "pt"
+  Default Frame Auto Font Size ON 
+  Frame From Layer 1
+    Position (0.472917,6.57431) Units "in"
+    Name "Легенда-1" Priority 2
+  Set CoordSys Layout Units "in"
+Set Window uniqueLayoutWin Front
+  Add Designer Page Window uniqueLayoutWin
+  Set Layout Window uniqueLayoutWin Page 2
+Create Text Into Window uniqueLayoutWin 
+    "Страница ${Page}"
+    (0.4729,10.1965) (1.2285,10.4521)
+    Font ("Arial",0,16,0)
+    Priority 1
+  Create Frame (0.4833,1.2069) (7.9361,8.9361) Pen(1,2,0)  Brush(1,16777215,16777215)  Priority 2 Name "Список-1"
+Create Text Into Window uniqueLayoutWin 
+    "Таблица: $mb{WindowInfo(LayoutItemInfo(CurContext(1), ""Список-1"", 5), 10)}"
+    (1.5521,0.5514) (6.9451,0.8708)
+    Font ("Arial",0,20,0)
+    Priority 3
+  Set Layout Window uniqueLayoutWin Page 1
+  Run Command restoreCoordSysString
+  Undim restoreCoordSysString
+  UnDim uniqueLayoutWin

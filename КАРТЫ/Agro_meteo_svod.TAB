@@ -1,0 +1,18 @@
+!table
+!version 1000
+!charset WindowsCyrillic
+
+Definition Table
+  File "Agro_meteo_svod.xlsx"
+  Type XLS Titles Range "Sheet1!A2:E18"
+  Fields 5
+    F1 Char (40) Index 2 ;
+    ราส_2006 Decimal (19, 2) Index 3 ;
+    ราส_2019 Decimal (19, 2) Index 4 ;
+    ราส_๑๐_2006_2019 Decimal (19, 2) Index 5 ;
+    ราส_่็์_2006_2019 Decimal (19, 2) Index 6 ;
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\MapInfo" = ""
+"\MapInfo\TableID" = "59d8a46f-73e4-4f3a-87e9-0eeb20c475b1"
+end_metadata
